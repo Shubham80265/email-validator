@@ -3,3 +3,4 @@ pandas
 openpyxl
 dnspython
 flask
+gunicorn
