@@ -1,10 +1,12 @@
 import requests
 
-ABSTRACT_API_KEY = "QN_b422f21f47e74eaeb2e8255bb8b5e8ae"
+ABSTRACT_API_KEY = "784d1d7d572640059eaeb0c42490b4b3"
 
 def check_email(email):
     url = f"https://emailvalidation.abstractapi.com/v1/?api_key={ABSTRACT_API_KEY}&email={email}"
+    print("DEBUG URL:", url)  # Optional for testing
     response = requests.get(url)
+
     if response.status_code == 200:
         data = response.json()
         return {
